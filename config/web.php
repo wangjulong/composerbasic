@@ -40,11 +40,16 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'suffix' => '.html',
+//            'showScriptName' => false,
+//            'suffix' => '.html',
         ],
     ],
     'params' => $params,
+    'modules' => [
+        'admin' => [
+            'class' => 'app\modules\admin\AdminModule',
+        ],
+    ],
 ];
 
 if (YII_ENV_DEV) {
